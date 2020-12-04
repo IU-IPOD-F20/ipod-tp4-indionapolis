@@ -1,8 +1,9 @@
 package application.action;
 
+import application.GenericClass;
 import bank.BankAgency;
 
-public class ActionAccountsLists implements Action{
+public class ActionAccountsLists<E extends GenericClass> implements Action<E>{
     private String message = "";
     private String code = "";
 
@@ -22,7 +23,7 @@ public class ActionAccountsLists implements Action{
     }
 
     @Override
-    public void execute(BankAgency ag) throws Exception {
+    public void execute(E ag) throws Exception {
         ag.print();
     }
 }

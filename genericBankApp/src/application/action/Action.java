@@ -4,7 +4,7 @@ import bank.BankAgency;
  * An Action is an object that implements some action of a user's menu.<BR>
  * It is defined by a message, an optional code, an execute method to "do" the action.
  */
-public interface ActionE <E> {
+public interface Action <E> {
     /**
      * Message of the action (to show on screen).
      *

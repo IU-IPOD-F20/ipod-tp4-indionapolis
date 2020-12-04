@@ -1,16 +1,17 @@
 package application.action;
 
+import application.GenericClass;
 import bank.Account;
 import bank.BankAgency;
 
 import java.util.Locale;
 import java.util.Scanner;
 
-public class ActionSeeAccountNumberE implements ActionE<E> {
+public class ActionSeeAccountNumber<E extends GenericClass> implements Action<E> {
     private String message = "";
     private String code = "";
 
-    public ActionSeeAccountNumberE(String code) {
+    public ActionSeeAccountNumber(String code) {
         message = "View an account (by its number)";
         this.code = code;
     }

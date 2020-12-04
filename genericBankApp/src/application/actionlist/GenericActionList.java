@@ -1,6 +1,7 @@
 package application.actionlist;
 
 import application.AccesBankAgency;
+import application.GenericClass;
 import application.action.Action;
 import bank.Account;
 import bank.BankAgency;
@@ -9,7 +10,7 @@ import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class GenericActionList implements ActionList {
+public class GenericActionList<E extends GenericClass> implements ActionList<E> {
     private String message;
     private String code;
     private String title;
@@ -48,7 +49,7 @@ public class GenericActionList implements ActionList {
     }
 
     @Override
-    public void execute(BankAgency ag) throws Exception {
+    public void execute(E ag) throws Exception {
         boolean proceed ;
         Scanner lect;
         Action action;

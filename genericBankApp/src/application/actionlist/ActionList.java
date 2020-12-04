@@ -1,10 +1,10 @@
 package application.actionlist;
 
-import application.action.ActionE;
+import application.action.Action;
 
 import java.util.ArrayList;
 
-public interface ActionListE<E> extends ActionE<E>{
+public interface ActionList<E> extends Action<E>{
     /**
      * Title of the list of actions (menu).
      *
@@ -25,5 +25,5 @@ public interface ActionListE<E> extends ActionE<E>{
      * @param ac the action to add
      * @return true if action is added, else false
      */
-    public boolean addAction(ActionE<E> ac);
+    public boolean addAction(Action<E> ac);
 }
